@@ -2,12 +2,28 @@
   "compilerOptions": {
     "sourceMap": true,
     "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
     "lib": [
       "esnext"
+      "ES2015"
     ],
     "moduleResolution": "node"
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "strict": true,
+    "target":"ES2018"
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.integ.ts",
+    "**/__fixtures__/*.*"
   ]
 }
