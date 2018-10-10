@@ -1,0 +1,6 @@
+SlackTopicArn:
+  Description: The Slack Alarms SNS Topic ARN
+  Value:
+    Ref: SNSTopicSlackAlarmsTopic
+  Export:
+    Name: SlackAlarmsTopicArn

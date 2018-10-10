@@ -1,24 +1,22 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "target": "es6",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "esModuleInterop": true,
     "lib": [
-      "esnext"
-      "ES2015"
+      "esnext",
+      "es2015"
     ],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./services",
     "sourceMap": true,
     "strict": true,
     "target":"ES2018"
   },
   "include": [
-    "src/**/*.ts"
+    "services/**/*.ts"
   ],
   "exclude": [
     "node_modules",

@@ -1,18 +1,26 @@
 service:
-  name: aws-nodejs-typescript
+  name: serverless-slack-notifier
 
-# Add the serverless-webpack plugin
 plugins:
-  - serverless-webpack
+- serverless-webpack
 
 provider:
   name: aws
   runtime: nodejs8.10
+  region: us-east-1
+
+  environment:
+    SLACK_HOOK_URL: ${env:SLACK_HOOK_URL}
+
+iamRoleStatements:
+  - Effect: "Allow"
+    Action:
+    - "SNS:Publish"
+    Resource:
+      Ref: SNSTopicSlackAlarmsTopic
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          method: get
-          path: hello
+  postErrorsToSlack: ${file(services/sns/PostErrorsToSlack/function.yml)}
+
+resources:
+  Outputs: ${file(conf/outputs.yml)}
