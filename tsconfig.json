@@ -9,14 +9,14 @@
     ],
     "moduleResolution": "node",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./services",
+    "outDir": "dist",
+    "rootDir": "src",
     "sourceMap": true,
     "strict": true,
     "target":"ES2018"
   },
   "include": [
-    "services/**/*.ts"
+    "src/services/**/*.ts"
   ],
   "exclude": [
     "node_modules",

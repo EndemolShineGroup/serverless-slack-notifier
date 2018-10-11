@@ -20,7 +20,7 @@ iamRoleStatements:
       Ref: SNSTopicSlackAlarmsTopic
 
 functions:
-  postErrorsToSlack: ${file(services/sns/PostErrorsToSlack/function.yml)}
+  postErrorsToSlack: ${file(src/services/sns/PostErrorsToSlack/function.yml)}
 
 resources:
   Outputs: ${file(conf/outputs.yml)}

@@ -1,0 +1,3 @@
+handler: src/services/sns/PostErrorsToSlack/handler.default
+events:
+  - sns: SlackAlarmsTopic
