@@ -3,9 +3,9 @@ AWS.config.update({region: 'us-east-1'});
 
 let sns = new AWS.SNS();
 
-const success = (data: string) => {
+const success = (data: object) => {
   console.log(`Message sent to the topic`);
-  console.log("Data: " + data);
+  console.log('Data: ' + JSON.stringify(data));
 };
 
 const failure = (err: Error) => {
@@ -15,17 +15,17 @@ const failure = (err: Error) => {
 const publishToTopic = async () => {
 
   try {
-    const { TopicArn } = await sns.createTopic({Name: "SlackAlarmsTopic"}).promise();
+    const { TopicArn } = await sns.createTopic({Name: 'SlackAlarmsTopic'}).promise();
 
     const params = {
       Message: JSON.stringify({
-        AlarmDescription: 'Stuffed Wombles',
-        AlarmName: 'sw',
+        AlarmDescription: 'A short test message',
+        AlarmName: 'Test',
         NewStateValue: 'ALARM',
-        NewStateReason: 'You',
+        NewStateReason: 'Something happened',
         Region: 'us-east-1',
         Trigger: {
-          MetricName: 'social-justice',
+          MetricName: 'things',
         },
       }),
       TopicArn,

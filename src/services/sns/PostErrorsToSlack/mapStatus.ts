@@ -1,6 +1,6 @@
 import { SlackStatus } from '../../../types/types';
 
-export const mapStatus = (NewStateValue: string) => {
+export default (NewStateValue: string): SlackStatus => {
   let status: SlackStatus;
   // Extract into mapStatusToSlack()
   switch (NewStateValue) {

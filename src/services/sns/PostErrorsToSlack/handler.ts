@@ -1,38 +1,23 @@
-import { Callback, Context, SNSEvent } from 'aws-lambda';
-import fetch from 'isomorphic-fetch';
+import { SNSEvent } from 'aws-lambda';
 import { SlackStatus, SNSMessage } from '../../../types/types';
-import { createAttachments } from './createAttachments';
-import { mapStatus } from './mapStatus';
+import createSlackMessage from './createSlackMessage';
+import mapStatus from './mapStatus';
+import publishToSlack from './publishToSlack';
 
-export default (event: SNSEvent, context: Context, callback: Callback) => {
-  const attachments = event.Records.map((record) => {
+export default async (event: SNSEvent) => {
+  const slackMessages = event.Records.map((record) => {
     const message: SNSMessage = JSON.parse(record.Sns.Message);
     const status: SlackStatus = mapStatus(message.NewStateValue);
-    return createAttachments(message, status);
+    return createSlackMessage(message, status);
   });
 
-  const promises = attachments.map(publishToSlack);
-
-  // Use async/await
-  Promise.all(promises)
-    .then(() => {
-      callback(null);
-    })
-    .catch((error) => {
-      callback(error);
-    });
-};
-
-const publishToSlack = (attachment: object) => {
-  const body = JSON.stringify(attachment);
-  const fetchConfig = {
-    body,
-    headers: {
-      'Content-Length': Buffer.byteLength(body),
-      'Content-Type': 'application/json',
-    },
-    method: 'POST',
-  };
-
-  return fetch(process.env.SLACK_HOOK_URL, fetchConfig);
+  try {
+    await Promise.all(
+      slackMessages.map((slackMessage) => {
+        return publishToSlack(slackMessage);
+      }),
+    );
+  } catch (error) {
+    return error;
+  }
 };

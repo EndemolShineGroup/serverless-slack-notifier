@@ -4,6 +4,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "lib": [
+      "dom",
       "esnext",
       "es2015"
     ],

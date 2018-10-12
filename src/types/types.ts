@@ -15,3 +15,22 @@ export interface SNSMessage {
   Region: string;
   Trigger: Trigger;
 }
+
+export interface SlackMessage {
+  attachments: SlackMessageAttachment[];
+}
+
+export interface SlackMessageAttachment {
+  color: string;
+  fallback: string;
+  fields: SlackMessageField[];
+  pretext: string;
+  text: string;
+  title: string;
+}
+
+export interface SlackMessageField {
+  short: boolean;
+  title: string;
+  value: string;
+}
