@@ -1,4 +1,5 @@
 import fetchMock from 'fetch-mock';
+
 import publishToSlack from './publishToSlack';
 
 describe('Incoming web hooks', () => {

@@ -1,4 +1,4 @@
-import { SlackStatus } from '../../../types/types';
+import { SlackStatus } from '@src/types';
 import mapStatus from './mapStatus';
 
 describe('map slack message status', () => {

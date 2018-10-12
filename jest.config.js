@@ -1,4 +1,7 @@
 const preset = require('ts-jest').jestPreset;
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+
+const { compilerOptions } = require('./tsconfig');
 
 module.exports = {
   preset: 'ts-jest',
@@ -26,6 +29,7 @@ module.exports = {
     'src',
     'node_modules',
   ],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   testMatch: [
     ...preset.testMatch,
     '**/?(*.)+(spec|integ|test).ts?(x)',

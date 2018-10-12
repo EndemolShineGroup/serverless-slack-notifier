@@ -1,4 +1,4 @@
-import { SlackStatus } from '../../../types/types';
+import { SlackStatus } from '@src/types';
 
 export default (NewStateValue: string): SlackStatus => {
   let status: SlackStatus;

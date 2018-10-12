@@ -1,8 +1,9 @@
 import { SNSEvent } from 'aws-lambda';
-import { SlackStatus, SNSMessage } from '../../../types/types';
-import createSlackMessage from './createSlackMessage';
-import mapStatus from './mapStatus';
-import publishToSlack from './publishToSlack';
+
+import createSlackMessage from '@lib/createSlackMessage';
+import mapStatus from '@lib/mapStatus';
+import publishToSlack from '@lib/publishToSlack';
+import { SlackStatus, SNSMessage } from '@src/types';
 
 export default async (event: SNSEvent) => {
   const slackMessages = event.Records.map((record) => {

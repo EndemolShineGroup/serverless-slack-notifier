@@ -3,7 +3,7 @@ import {
   SlackMessageField,
   SlackStatus,
   SNSMessage,
-} from '../../../types/types';
+} from '@src/types';
 
 export default (message: SNSMessage, status: SlackStatus): SlackMessage => {
   let { color, icon } = status;

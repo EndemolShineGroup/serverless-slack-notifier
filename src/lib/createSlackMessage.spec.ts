@@ -1,9 +1,4 @@
-import {
-  SlackMessage,
-  SlackStatus,
-  SNSMessage,
-  Trigger,
-} from '../../../types/types';
+import { SlackMessage, SlackStatus, SNSMessage } from '@src/types';
 import createSlackMessage from './createSlackMessage';
 
 describe('create slack message', () => {
