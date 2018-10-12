@@ -12,6 +12,10 @@ module.exports = {
   entry: entries,
   devtool: 'source-map',
   resolve: {
+    alias: {
+      '@lib': path.join(__dirname, 'src', 'lib'),
+      '@src': path.join(__dirname, 'src'),
+    },
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
   output: {
