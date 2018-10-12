@@ -45,6 +45,7 @@
     "@types/isomorphic-fetch": "^0.0.34",
     "@types/jest": "^23",
     "@types/node": "^10",
+    "@types/uuid": "^3.4.4",
     "aws-sdk": "^2.331.0",
     "commitizen": "^3",
     "fetch-mock": "^7.0.7",
@@ -65,6 +66,7 @@
     "tslint-eslint-rules": "^5",
     "typedoc": "^0.12.0",
     "typescript": "^3",
+    "uuid": "^3.3.2",
     "webpack": "^4.5.0"
   },
   "publishConfig": {
