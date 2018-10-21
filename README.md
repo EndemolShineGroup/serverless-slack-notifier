@@ -14,20 +14,13 @@
 [![Semantic Release][icon-semantic-release]][link-semantic-release]
 [![Prettier][icon-prettier]][link-prettier]
 
-
-
 ## Installation
 
 ```bash
-yarn add @endemolshinegroup/serverless-slack-notifier
-```
-
-## Usage
-
-```typescript
-import Library from @endemolshinegroup/serverless-slack-notifier;
-
-const library = new Library();
+serverless create --template-url https://github.com/EndemolShineGroup/serverless-slack-notifier --path my-project
+cd my-project
+yarn
+serverless deploy
 ```
 
 [icon-license]: https://img.shields.io/github/license/EndemolShineGroup/serverless-slack-notifier.svg?longCache=true&style=flat-square
