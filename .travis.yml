@@ -10,6 +10,7 @@ before_install:
   - npm i -g yarn
 
 script:
+  - yarn lint
   - yarn build
   - yarn test
 
@@ -18,20 +19,23 @@ script:
 
 notifications:
   slack:
-    # secure
-    your-slack-organisation:your-slack-api-token
+    rooms:
+      # secure
+      your-slack-organisation:your-slack-api-token
+    on_success: change
+    on_failure: always
 
 env:
   global:
     # secure
-    - CC=your-code-climate-token
+    - CC_TEST_REPORTER_ID=your-code-climate-token
     # secure
     - GH_TOKEN=your-github-token
     # secure
     - NPM_TOKEN=your-npm-token
-    - export GIT_AUTHOR_NAME="EndemolShineGroupUser"
+    - export GIT_AUTHOR_NAME="esg-bot"
     - export GIT_AUTHOR_EMAIL="tech@endemolshine.com"
-    - export GIT_COMMITTER_NAME="EndemolShineGroupUser"
+    - export GIT_COMMITTER_NAME="esg-bot"
     - export GIT_COMMITTER_EMAIL="tech@endemolshine.com"
 
 jobs:

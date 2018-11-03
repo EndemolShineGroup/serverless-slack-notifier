@@ -4,25 +4,26 @@
     "baseUrl": "src",
     "declaration": true,
     "esModuleInterop": true,
+    "importHelpers": true,
     "lib": [
       "dom",
       "esnext",
       "es2015"
     ],
-    "moduleResolution": "node",
     "module": "commonjs",
     "outDir": "dist",
     "paths": {
       "@lib/*": ["lib/*"],
       "@src/*": ["*"]
     },
+    "resolveJsonModule": true,
     "rootDir": "src",
     "sourceMap": true,
     "strict": true,
-    "target":"ES2018"
+    "target":"es2015"
   },
   "include": [
-    "src/services/**/*.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
