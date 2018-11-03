@@ -17,7 +17,6 @@
 
 ![Architecture](docs/assets/architecture.png)
 
-
 ## Installation
 
 ```bash
