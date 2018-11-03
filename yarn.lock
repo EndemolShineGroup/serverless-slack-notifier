@@ -177,6 +177,13 @@
   resolved "https://registry.yarnpkg.com/@endemolshinegroup/prettier-config/-/prettier-config-1.0.0.tgz#6cebb12e530a0c67176c617c536739df55d961c1"
   integrity sha512-cAuOTDycdarI9AZaN7RNcSQyQlA5X1TKCVkaH0AWWXxF5jcCK3MfD6MkpclAsm511+AHfYAH1YTj6kWJhZMpvg==
 
+"@endemolshinegroup/serverless-test-utils@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@endemolshinegroup/serverless-test-utils/-/serverless-test-utils-1.0.1.tgz#effb3f3a34ec9129946ec1294d1aea7069f5ecce"
+  integrity sha512-Y2bIyFeFxL2+bQ7DU847Yr8GSKtN5MOtWUM5UVzQBs58at0XVuDa13aLgDUktCmrWT0ggab9kfUrRXWVCdan2g==
+  dependencies:
+    aws-sdk "^2.332.0"
+
 "@endemolshinegroup/tslint-config@^1":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@endemolshinegroup/tslint-config/-/tslint-config-1.0.2.tgz#d2866c581e0d4224c3bd08c47f36556f592aeaa4"
@@ -985,6 +992,21 @@ aws-sdk@^2.228.0, aws-sdk@^2.331.0:
   version "2.331.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.331.0.tgz#39cf61040a33c2e4a576fe4d5ec15259a89f9bbe"
   integrity sha512-+Kd0wUxoLFUOM3+pbKcPLSGIXsXCaFBaneUe6xFr/Nkn8YAwkH05ufSVdK6Q1AjdNnc1sR0HNV8R18dM8riXOQ==
+  dependencies:
+    buffer "4.9.1"
+    events "1.1.1"
+    ieee754 "1.1.8"
+    jmespath "0.15.0"
+    querystring "0.2.0"
+    sax "1.2.1"
+    url "0.10.3"
+    uuid "3.1.0"
+    xml2js "0.4.19"
+
+aws-sdk@^2.332.0:
+  version "2.343.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.343.0.tgz#4277b6f5a2fe359f38978c1d8170947138af45d9"
+  integrity sha512-WB7uwmlyQ2NHEmXufYgJa6Qr1uwAFqBJ5GBgO8YALYAck9C6TLGD9/oKJGK93PXBpmgPdJqVIfxZE80YQ5/xXQ==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
