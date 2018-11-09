@@ -4,15 +4,10 @@ import {
   deployService,
   publishSnsMessage,
   removeService,
+  sleep,
 } from '@endemolshinegroup/serverless-test-utils';
 import 'isomorphic-fetch';
 import uuid from 'uuid/v4';
-
-const sleep = (time: number) => {
-  return new Promise((resolve) => {
-    return setTimeout(resolve, time);
-  });
-};
 
 describe('PostErrorsToSlack', () => {
   const hashCode: string = uuid();
@@ -21,7 +16,7 @@ describe('PostErrorsToSlack', () => {
   beforeAll(async () => {
     serviceName = createTestService('aws-nodejs-typescript', process.cwd());
     deployService();
-    // sleep(20000);
+    await sleep(50000);
   });
 
   afterAll(async () => {
