@@ -33,7 +33,7 @@ module.exports = {
   setupFiles: [ '<rootDir>/src/setupTests.ts' ],
   testMatch: [
     ...preset.testMatch,
-    '**/?(*.)+(spec|integ|test).ts?(x)',
+    '**/?(*.)+(spec|i10n|test).ts?(x)',
   ],
   transformIgnorePatterns: [
     '<rootDir>/node_modules/',
