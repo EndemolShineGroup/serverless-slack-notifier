@@ -64,4 +64,6 @@ Resources:
         Location: 'https://github.com/EndemolShineGroup/serverless-slack-notifier'
         ReportBuildStatus: true
         Type: GITHUB
+      Triggers:
+        Webhook: true
     DependsOn: CodeBuildIamRole
