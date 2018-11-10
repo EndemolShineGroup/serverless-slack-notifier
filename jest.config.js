@@ -30,7 +30,6 @@ module.exports = {
     'node_modules',
   ],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
-  setupFiles: [ '<rootDir>/src/setupTests.ts' ],
   testMatch: [
     ...preset.testMatch,
     '**/?(*.)+(spec|i10n|test).ts?(x)',
