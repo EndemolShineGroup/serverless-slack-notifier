@@ -20,10 +20,20 @@
 
 ## Installation
 
+### With CI
+
+```bash
+export SLACK_HOOK_URL=<slack-hook-url>
+scripts/deploy-codebuild.sh
+```
+
+### Without CI
+
 ```bash
 serverless create --template-url https://github.com/EndemolShineGroup/serverless-slack-notifier --path my-project
 cd my-project
 yarn
+export SLACK_HOOK_URL=<slack-hook-url>
 serverless deploy
 ```
 
