@@ -46,7 +46,7 @@
     "@semantic-release/git": "^7",
     "@types/aws-lambda": "^8.10.13",
     "@types/fetch-mock": "^6.0.4",
-    "@types/isomorphic-fetch": "^0.0.34",
+    "@types/isomorphic-fetch": "^0.0.35",
     "@types/jest": "^23",
     "@types/node": "^10",
     "@types/uuid": "^3.4.4",
