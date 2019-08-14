@@ -57,7 +57,7 @@
     "jest": "^23",
     "lint-staged": "^8",
     "prettier": "^1",
-    "rimraf": "^2",
+    "rimraf": "^2.7.1",
     "semantic-release": "^15",
     "serverless": "^1.32.0",
     "serverless-webpack": "^5.1.1",
