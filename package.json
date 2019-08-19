@@ -70,7 +70,7 @@
     "tslint-eslint-rules": "^5",
     "typedoc": "^0.13.0",
     "typescript": "^3",
-    "uuid": "^3.3.2",
+    "uuid": "^3.3.3",
     "webpack": "^4.5.0"
   }
 }
