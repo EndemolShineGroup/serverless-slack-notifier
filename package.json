@@ -50,7 +50,7 @@
     "@types/jest": "^23",
     "@types/node": "^10",
     "@types/uuid": "^3.4.4",
-    "aws-sdk": "^2.331.0",
+    "aws-sdk": "^2.589.0",
     "commitizen": "^3",
     "fetch-mock": "^7.0.7",
     "husky": "^1",
