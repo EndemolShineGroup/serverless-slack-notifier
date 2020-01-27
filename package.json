@@ -43,7 +43,7 @@
     "@endemolshinegroup/serverless-test-utils": "^1.0.3",
     "@endemolshinegroup/tslint-config": "^1",
     "@semantic-release/changelog": "^3",
-    "@semantic-release/git": "^7",
+    "@semantic-release/git": "^9.0.0",
     "@types/aws-lambda": "^8.10.13",
     "@types/fetch-mock": "^6.0.4",
     "@types/isomorphic-fetch": "^0.0.34",
