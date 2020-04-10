@@ -53,7 +53,7 @@
     "aws-sdk": "^2.331.0",
     "commitizen": "^3",
     "fetch-mock": "^7.0.7",
-    "husky": "^1",
+    "husky": "^4.2.5",
     "jest": "^23",
     "lint-staged": "^8",
     "prettier": "^1",
