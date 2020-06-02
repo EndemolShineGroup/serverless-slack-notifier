@@ -44,7 +44,7 @@
     "@endemolshinegroup/tslint-config": "^1",
     "@semantic-release/changelog": "^3",
     "@semantic-release/git": "^7",
-    "@types/aws-lambda": "^8.10.13",
+    "@types/aws-lambda": "^8.10.52",
     "@types/fetch-mock": "^6.0.4",
     "@types/isomorphic-fetch": "^0.0.34",
     "@types/jest": "^23",
